@@ -3,6 +3,148 @@
 	<title>Mizashow Products</title>
 <head>
 	<style>
+
+body {
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+header {
+    background: #181818;
+    height: 200px;
+    padding-top: 40px;
+}
+.inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    position: relative;
+}
+.logo {
+    text-decoration: none;
+    color: #777;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px;
+    color: #eee;
+    font-weight: 800;
+    font-size: 40px;
+}
+nav > ul {
+    float: right;
+}
+nav > ul > li {
+    text-align: center;
+    line-height: 40px;
+    margin-left: 70px;
+}
+nav > ul li ul li {
+    width: 100%;
+    text-align: left;
+}
+nav ul li:hover {
+    cursor: pointer;
+    position: relative;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li:hover > a {
+    color: #777;
+}
+nav > ul > li > a {
+    cursor: pointer;
+    display: block;
+    outline: none;
+    width: 100%;
+    text-decoration: none;
+}
+nav > ul > li {
+    float: left;
+}
+nav a {
+    color: white;
+}
+nav > ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 2000;
+}
+nav > ul li ul li > a {
+    text-decoration: none;
+}
+[type="checkbox"],
+label {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    label {
+        display: block;
+        background: #222;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 0px;
+    }
+    label:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #777;
+        margin: 7px 5px;
+        box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+    }
+    [type="checkbox"]:checked ~ ul {
+        display: block;
+        z-index: 9999;
+        position: absolute;
+        right: 20px;
+        left: 20px;
+    }
+    nav a {
+        color: #777;
+    }
+    nav ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: left;
+        background: #222;
+        text-indent: 20px;
+    }
+    nav > ul > li {
+        margin-left: 0px;
+    }
+    nav > ul li ul li {
+        display: block;
+        float: none;
+    }
+    nav > ul li ul {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 9999;
+        float: none;
+    }
+    h1 {
+        font-size: 26px;
+    }
+}
 	
 		/* style to set body of page */
 		body {
@@ -43,8 +185,30 @@
 		}
 	</style>
 </head>
+<header>
+  <div class="inner">
+      <nav>
+          <a href="#" class="logo">Logo</a>
+          <input type="checkbox" id="nav" /><label for="nav"></label>
+           <ul>
+              <li><a href="#">Home</a></li>
+              <li>
+                  <a href="#">Work</a>
+                  <ul>
+                      <li><a href="#">Web</a></li>
+                      <li><a href="#">Print</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
 
 <body>
+  
   <h2 style="text-align: center;">MS Products Shopping</h2>
 	<div class = "gallery">
 		<div class = "box">
@@ -165,18 +329,15 @@
                                 <div class = "image">
                                   <a target="_blank" href=
                                   "https://produto.mercadolivre.com.br/MLB-1817757570-perfumes-importados-da-linha-antnio-bandeira-100-original-_JM">
-                                  </a>
                                   <img src =
                                     "img/hergolden.jpg"
                                     width = "275" height = "285">
                                   </a></div>
                                 </div>
-
                                 <div class = "box">
                                 <div class = "image">
                                   <a target="_blank" href=
                                   "https://produto.mercadolivre.com.br/MLB-902653975-perfume-importado-ferrari-black-125-ml-lacrado-e-original-_JM">
-                                </a>
                                   <img src =
                                     "img/ferrari.jpg"
                                     width = "275" height = "285">
@@ -185,9 +346,7 @@
                                 <div class = "box">
                                   <div class = "image">
                                     <a target="_blank" href=
-                                    "https://produto.mercadolivre.com.br/MLB-1910915124-her-secret-desire-antnio-bandeira-_JM">
-                                  </a>
-                                    <img src =
+                                    "https://produto.mercadolivre.com.br/MLB-1910915124-her-secret-desire-antnio-bandeira-_JM">                                    <img src =
                                       "img/roxokit.jpg"
                                       width = "275" height = "285">
                                     </a></div>
@@ -195,9 +354,7 @@
                                   <div class = "box">
                                     <div class = "image">
                                       <a target="_blank" href=
-                                      "https://produto.mercadolivre.com.br/MLB-1871489582-deodorant-spray-antnio-bandeira-blue-seduction-_JM">
-                                    </a>
-                                      <img src =
+                                      "https://produto.mercadolivre.com.br/MLB-1871489582-deodorant-spray-antnio-bandeira-blue-seduction-_JM">                                      <img src =
                                         "img/bluedeo.jpg"
                                         width = "275" height = "285">
                                       </a></div>
@@ -205,9 +362,7 @@
                                     <div class = "box">
                                       <div class = "image">
                                         <a target="_blank" href=
-                                        "https://www.mercadolivre.com.br/jacques-bogart-silver-scent-edt-100ml-para-masculino/p/MLB5454249?pdp_filters=seller_id%3A176774316">
-                                      </a>
-                                        <img src =
+                                        "https://www.mercadolivre.com.br/jacques-bogart-silver-scent-edt-100ml-para-masculino/p/MLB5454249?pdp_filters=seller_id%3A176774316">                                        <img src =
                                           "img/jaques.jpeg"
                                           width = "275" height = "285">
                                         </a></div>
@@ -215,9 +370,7 @@
                                       <div class = "box">
                                         <div class = "image">
                                           <a target="_blank" href=
-                                          "https://produto.mercadolivre.com.br/MLB-1961543354-perfume-gabriela-sabatini-_JM">
-                                        </a>
-                                          <img src =
+                                          "https://produto.mercadolivre.com.br/MLB-1961543354-perfume-gabriela-sabatini-_JM">                                          <img src =
                                             "img/gabriela.jpg"
                                             width = "275" height = "285">
                                           </a></div>
@@ -225,9 +378,7 @@
                                         <div class = "box">
                                           <div class = "image">
                                             <a target="_blank" href=
-                                            "https://www.mercadolivre.com.br/jacques-bogart-silver-scent-edt-100ml-para-masculino/p/MLB5454249?pdp_filters=seller_id%3A176774316">
-                                          </a>
-                                            <img src =
+                                            "https://www.mercadolivre.com.br/jacques-bogart-silver-scent-edt-100ml-para-masculino/p/MLB5454249?pdp_filters=seller_id%3A176774316">                                            <img src =
                                               "img/one.jpeg"
                                               width = "275" height = "285">
                                             </a></div>
@@ -236,7 +387,6 @@
                                             <div class = "image">
                                               <a target="_blank" href=
                                               "https://produto.mercadolivre.com.br/MLB-1817757815-perfumes-importados-da-linha-antnio-bandeira100-original-_JM">
-                                            </a>
                                               <img src =
                                                 "img/antoniosilver.jpg"
                                                 width = "275" height = "285">

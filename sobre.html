@@ -12,8 +12,7 @@ body {
 }
 header {
     background: hsla(212, 44%, 69%, 0.527);
-    height: 200px;
-    padding-top: 40px;
+    height: 85px;
 }
 .inner {
     max-width: 1000px;
@@ -71,6 +70,8 @@ nav > ul > li {
 nav a {
     color: white;
 }
+
+
 nav > ul li ul {
     display: none;
     position: absolute;
@@ -79,6 +80,11 @@ nav > ul li ul {
     width: 100%;
     z-index: 2000;
 }
+li:hover{
+  color: #c5cae9;
+
+}
+
 nav > ul li ul li > a {
     text-decoration: none;
 }
@@ -157,18 +163,26 @@ label {
 			flex-flow: row wrap;
 		}
 		.box {
+      border:solid 1px;
+    border-radius:20px;
 			flex-basis:20%;
 			width:100%;
 			padding:10px;
 			margin:8px;
-			box-shadow: 1px 1px 1px 1px rgb(65, 65, 65);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      border-radius: 13px 13px 13px 13px;
+      -moz-border-radius: 13px 13px 13px 13px;
+      -webkit-border-radius: 13px 13px 13px 13px;
+      border: 0px solid #000000;
 		}
 		.text {
 			text-align:center;
 			margin-top:5px;
 		}
 		.image:hover {
-			border: 3px solid rgb(19, 2, 168);
+			border: 2px solid rgb(102, 102, 105);
+      border-radius:10px;
+
 		}
 		
 		/* media query used here */

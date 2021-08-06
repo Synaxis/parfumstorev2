@@ -124,6 +124,7 @@ label {
     }
     nav ul li {
         list-style:none;
+        text-decoration: none;
         display: block;
         float: none;
         width: 100%;

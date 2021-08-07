@@ -36,7 +36,7 @@ nav > ul {
     float: right;
 }
 nav > ul > li {
-    
+    border-radius: 5px;
     list-style: none;
     text-decoration: none;
     text-align: center;
@@ -116,12 +116,12 @@ label {
     }
     label {
         display: block;
-        background: rgb(217, 255, 0);
-        width: 40px;
-        height: 40px;
+        background: rgb(87, 83, 83);
+        width: 100px;
+        height: 70px;
         cursor: pointer;
         position: absolute;
-        right: 20px;
+        right: 1px;
         top: 0px;
     }
     label:after {
@@ -134,21 +134,31 @@ label {
         box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
     }
     [type="checkbox"]:checked ~ ul {
-        display: block;
+        border: none;
+        border-radius: 40px 10px;
+        display: grid;
         z-index: 9999;
         position: absolute;
         right: 20px;
-        left: 20px;
+        left: -40px;
+        top: -12px;
+        font-size: 14px;
     }
-    nav a {
+    nav a {	
+        
+        padding: 14px 16px;
+
+        font-size: 15px;
+        cursor: pointer;
         color: rgb(255, 255, 255);
     }
     nav ul li {
+        position: sticky;
         list-style:none;
         text-decoration: none;
         display: block;
         float: none;
-        width: 100%;
+        width: 35%;
         text-align: left;
         background: #222;
         text-indent: 20px;
@@ -159,6 +169,12 @@ label {
     nav > ul li ul li {
         display: block;
         float: none;
+    }
+    nav > ul > li:hover {
+        background:#333;
+color:#fff;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
     }
     nav > ul li ul {
         display: block;

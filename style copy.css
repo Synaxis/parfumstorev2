@@ -1,0 +1,262 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0px 2px 2px rgb(200 200 200);
+}
+
+* {
+  font-family: 'Courier New', monospace;
+    box-sizing: border-box;
+}
+header {
+    background: #0066CC;
+    height: 85px;
+}
+.inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+.logo {
+    text-decoration: none;
+    color: rgba(58, 58, 58, 0.966);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 80px;
+}
+h1 h2 h3 h4 h5 h6 {
+    margin: 0;
+}
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+nav > ul > li {
+    font-size: 3vh;
+    margin: 0 2vw;
+    border-radius: 5px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    /*margin-left: 70px;*/
+}
+nav > ul li ul li {
+    width: 100%;
+    text-align: left;
+}
+nav ul li:hover {
+    cursor: pointer;
+    position: relative;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li:hover > a {
+    color: #777;
+}
+nav > ul > li > a {
+    cursor: pointer;
+    display: block;
+    outline: none;
+    width: 100%;
+    text-decoration: none;
+}
+nav > ul > li {
+    border-bottom: 1px solid #555;
+    float: left;
+}
+nav a {
+    font-family: monospace;
+    color: white;
+}
+
+
+nav > ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 2000;
+}
+li:hover{
+  color: #c5cae9;
+
+}
+
+nav > ul li ul li > a {
+    text-decoration: none;
+}
+[type="checkbox"],
+label {
+    display: none;
+}
+@media only screen and (max-device-width: 480px) {
+    nav {
+        zoom: 150%;
+
+    }
+    nav ul li {
+        list-style:none;
+        text-decoration: none;
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: left;
+        background: rgb(53, 30, 184);
+        
+        text-indent: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+      
+      /* deletes margin on top or bottom of the a tag*/
+      nav > li{
+        margin: 0;
+      }
+     /* makes sure that the a tag will take the entire screen*/
+      nav > a{
+        display: block;
+      }
+    nav ul {
+        display: none;
+        flex-direction: column;
+
+    }
+    label {
+        border-radius: 5px;
+        display: block;
+        background: rgb(87, 83, 83);
+        width: 200px;
+        height: 60px;
+        cursor: pointer;
+        position: absolute;
+        right: 1px;
+        top: 0px;
+    }
+    label:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #777;
+        margin: 7px 5px;
+        box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+    }
+    [type="checkbox"]:checked ~ ul {
+        display: flex;
+        cursor: pointer;
+        align-self: flex-start;
+        border: none;
+        border-radius: 40px 10px;
+        z-index: 9999;
+        position: absolute;
+        right: 20px;
+        left: -40px;
+        top: -12px;
+        font-size: 3vh;
+        text-align: center;
+        flex-direction: row;
+    }
+    * {
+        min-zoom: 15%;
+    }
+    body {
+        font-size: 3vh;
+    }
+    nav a {        
+        font-family: monospace;
+        padding: 14px 16px;
+        text-align:center;
+        font-size: 2vh;
+        cursor: pointer;
+        color: white;
+    }
+    nav ul li {
+        position: sticky;
+        list-style:none;
+        text-decoration: none;
+        display: block;
+        float: none;
+        width: 35%;
+        text-align: left;
+        background: #222;
+        text-indent: 20px;
+    }
+    nav > ul > li {
+        margin-left: 0px;
+    }
+    nav > ul li ul li {
+        display: block;
+        float: none;
+    }
+    nav > ul > li:hover {
+        
+        background:#333;
+color:#fff;
+-moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+    }
+    nav > ul li ul {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 9999;
+        float: none;
+    }
+}
+	
+		/* style to set body of page */
+body {
+			width:100%;
+			margin:auto;
+	}
+.gallery {
+			width:100%;
+			display:flex;
+			flex-flow: row wrap;
+		}
+.box {
+    border:solid 1px;
+    border-radius:20px;
+	flex-basis:20%;
+	width:100%;
+	padding:10px;
+	margin:8px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      border-radius: 13px 13px 13px 13px;
+      -moz-border-radius: 13px 13px 13px 13px;
+      -webkit-border-radius: 13px 13px 13px 13px;
+      border: 0px solid #000000;
+		}
+		.text {
+			text-align:center;
+			margin-top:5px;
+		}
+		.image:hover {
+			border: 2px solid rgb(102, 102, 105);
+      border-radius:10px;
+
+		}
+		
+		/* media query used here */
+		@media only screen and (max-width: 300px) {
+			.box {
+				flex-basis: 100%;
+			}
+		}
+		
+		@media only screen and (max-width:500px) {
+			.box {
+				flex-basis: 40%;
+			}
+		}

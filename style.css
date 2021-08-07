@@ -1,14 +1,19 @@
-
-body {
-
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0px 2px 2px rgb(200 200 200);
+}
+
 * {
   font-family: 'Courier New', monospace;
     box-sizing: border-box;
 }
 header {
     background: #0066CC;
-    height: 85px;
+    height: 0;
 }
 .inner {
     max-width: 1000px;
@@ -27,169 +32,99 @@ h1 h2 h3 h4 h5 h6 {
     margin: 0;
 }
 
-nav > ul {
-    margin: 0;
-    padding: 0;
-    float: right;
-}
-nav > ul > li {
-    font-size: 3vh;
-    margin: 0 2vw;
-    border-radius: 5px;
-    list-style: none;
-    text-decoration: none;
-    text-align: center;
-    line-height: 40px;
-    /*margin-left: 70px;*/
-}
-nav > ul li ul li {
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 50px;
     width: 100%;
-    text-align: left;
-}
-nav ul li:hover {
-    cursor: pointer;
+    background-color: #0066CC;
     position: relative;
-}
-nav ul li:hover > ul {
-    display: block;
-}
-nav ul li:hover > a {
-    color: #777;
-}
-nav > ul > li > a {
-    cursor: pointer;
-    display: block;
-    outline: none;
-    width: 100%;
-    text-decoration: none;
-}
-nav > ul > li {
-    border-bottom: 1px solid #555;
-    float: left;
-}
-nav a {
-    color: white;
-}
-
-
-nav > ul li ul {
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
     display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    z-index: 2000;
-}
-li:hover{
-  color: #c5cae9;
-
-}
-
-nav > ul li ul li > a {
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
     text-decoration: none;
-}
-[type="checkbox"],
-label {
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
     display: none;
-}
-@media only screen and (max-device-width: 480px) {
-    nav {
-        zoom: 150%;
-
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
     }
-    nav ul li {
-        list-style:none;
-        text-decoration: none;
-        display: block;
-        float: none;
-        width: 100%;
-        text-align: left;
-        background: rgb(53, 30, 184);
-        
-        text-indent: 20px;
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
     }
-}
-
-@media screen and (min-width: 768px) {
-    nav ul {
-        display: none;
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
     }
-    label {
-        border-radius: 5px;
-        display: block;
-        background: rgb(87, 83, 83);
-        width: 100px;
-        height: 70px;
-        cursor: pointer;
-        position: absolute;
-        right: 1px;
-        top: 0px;
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
     }
-    label:after {
-        content: '';
-        display: block;
-        width: 30px;
-        height: 5px;
-        background: #777;
-        margin: 7px 5px;
-        box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
     }
-    [type="checkbox"]:checked ~ ul {
-        border: none;
-        border-radius: 40px 10px;
-        display: grid;
-        z-index: 9999;
-        position: absolute;
-        right: 20px;
-        left: -40px;
-        top: -12px;
-        font-size: 3vh;
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
     }
-    * {
-        min-zoom: 15%;
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
     }
-    body {
-        font-size: 3vh;
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
     }
-    nav a {        
-        padding: 14px 16px;
-
-        font-size: 3vh;
-        cursor: pointer;
-        color: white;
-    }
-    nav ul li {
-        position: sticky;
-        list-style:none;
-        text-decoration: none;
-        display: block;
-        float: none;
-        width: 35%;
-        text-align: left;
-        background: #222;
-        text-indent: 20px;
-    }
-    nav > ul > li {
-        margin-left: 0px;
-    }
-    nav > ul li ul li {
-        display: block;
-        float: none;
-    }
-    nav > ul > li:hover {
-        background:#333;
-color:#fff;
--moz-box-shadow:0 3px 10px 0 #CCC;
--webkit-box-shadow:0 3px 10px 0 #ccc;
-    }
-    nav > ul li ul {
-        display: block;
-        position: relative;
-        width: 100%;
-        z-index: 9999;
-        float: none;
-    }
-}
+  }
 	
 		/* style to set body of page */
 body {

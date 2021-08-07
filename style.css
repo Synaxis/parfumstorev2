@@ -20,8 +20,8 @@ header {
     text-decoration: none;
     color: rgba(58, 58, 58, 0.966);
     font-weight: 800;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 22px;
+    line-height: 80px;
 }
 h1 {
     text-align: center;
@@ -36,6 +36,9 @@ nav > ul {
     float: right;
 }
 nav > ul > li {
+    
+    list-style: none;
+    text-decoration: none;
     text-align: center;
     line-height: 40px;
     margin-left: 70px;
@@ -89,13 +92,31 @@ nav > ul li ul li > a {
 label {
     display: none;
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-device-width: 480px) {
+    nav {
+        zoom: 150%;
+
+    }
+    nav ul li {
+        list-style:none;
+        text-decoration: none;
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: left;
+        background: rgb(53, 30, 184);
+        
+        text-indent: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
     nav ul {
         display: none;
     }
     label {
         display: block;
-        background: #222;
+        background: rgb(217, 255, 0);
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -120,7 +141,7 @@ label {
         left: 20px;
     }
     nav a {
-        color: #777;
+        color: rgb(255, 255, 255);
     }
     nav ul li {
         list-style:none;

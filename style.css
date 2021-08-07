@@ -23,6 +23,9 @@ header {
     font-size: 22px;
     line-height: 80px;
 }
+h3 {
+    margin: 0.5em;
+}
 h1 {
     text-align: center;
     width: 100%;
@@ -65,6 +68,7 @@ nav > ul > li > a {
     text-decoration: none;
 }
 nav > ul > li {
+    border-bottom: 1px solid #555;
     float: left;
 }
 nav a {
@@ -115,6 +119,7 @@ label {
         display: none;
     }
     label {
+        border-radius: 5px;
         display: block;
         background: rgb(87, 83, 83);
         width: 100px;
@@ -144,11 +149,17 @@ label {
         top: -12px;
         font-size: 14px;
     }
+    * {
+        min-zoom: 15%;
+    }
+    body {
+        font-size: 26px;
+    }
     nav a {	
         
         padding: 14px 16px;
 
-        font-size: 15px;
+        font-size: 26px;
         cursor: pointer;
         color: rgb(255, 255, 255);
     }

@@ -30,11 +30,12 @@
 
 /* Style navigation menu links */
 .topnav a {
+  border-radius: 5px;
   font-family: monospace;
   color: white;
   padding: 20px 28px;
   text-decoration: none;
-  font-size: 3vh;
+  font-size: 2.5vh;
   display: block;
 }
 
@@ -55,7 +56,7 @@
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #083bc7;
+  background-color: #1B3D81;
   color: white;
 }
   h2 {
@@ -70,6 +71,11 @@
   }
 
   body {
+    border-width:10px;
+    border-left-style: solid;
+    border-left-color:#bebebe;
+    border-right-style: solid;
+    border-right-color: #bebebe;
     zoom: 105%;
     margin: 0px;
     font-family: sans-serif;
